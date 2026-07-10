@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #0B1F3A;
+    background-color: #F4F6F9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .pipeline-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .pipeline-divider .line {
+    flex: 1;
+    height: 2px;
+    background-color: #D4A017;
+    max-width: 200px;
+  }
+  .pipeline-divider .valve {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #D4A017;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+  }
+  .pipeline-divider .valve::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: #D4A017;
+    border-radius: 50%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Leaflet map customizations */
+.leaflet-container {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Swiper customizations */
+.swiper-pagination-bullet {
+  background-color: #8FAABE !important;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background-color: #D4A017 !important;
+  opacity: 1;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1F3A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A017;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B3860F;
+}
