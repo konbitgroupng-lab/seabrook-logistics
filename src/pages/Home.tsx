@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
@@ -10,8 +10,6 @@ import storageTanks from '../assets/seabrook-storage-tanks.jpg';
 import pipelineImg from '../assets/seabrook-pipeline.jpg';
 import labTechImg from '../assets/seabrook-lab-tech.jpg';
 
-const heroVideos = [hero1, '/HeroE.mp4'];
-
 const stats = [
   { value: 3.1, suffix: 'M+', label: 'STORAGE CAPACITY' },
   { value: 2, suffix: '', label: 'DEEPWATER DOCKS' },
@@ -19,27 +17,20 @@ const stats = [
 ];
 
 const Home: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoIdx, setVideoIdx] = useState(0);
-
-  const handleVideoEnded = useCallback(() => {
-    setVideoIdx((prev) => (prev + 1) % heroVideos.length);
-  }, []);
-
   return (
     <div>
       {/* Hero — negative margin pulls it up to sit flush behind the fixed navbar */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden -mt-[96px]">
-        {/* Background video — cycles HeroD → HeroE → repeat */}
+      <section
+        className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden -mt-[96px]"
+        style={{ background: '#0B1F3A' }}
+      >
+        {/* Background video — loops automatically, no poster so no photo flash */}
         <video
-          ref={videoRef}
-          key={heroVideos[videoIdx]}
-          src={heroVideos[videoIdx]}
+          src={hero1}
           autoPlay
           muted
+          loop
           playsInline
-          onEnded={handleVideoEnded}
-          poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Overlay — 7/10 brightness flat dark */}
