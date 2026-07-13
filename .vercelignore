@@ -1,4 +1,5 @@
 node_modules
+dist
 src/assets/services-bg.mp4
 src/assets/bless.mp4
 src/assets/about-hero.mp4
