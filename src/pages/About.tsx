@@ -124,21 +124,24 @@ const About: React.FC = () => {
                 BUILT FOR SCALE, DESIGNED FOR THE FUTURE
               </h2>
               <p className="text-navy/80 font-body text-base leading-relaxed mb-4">
-                Seabrook Logistics, LLC was established as a 50/50 joint venture between LBC Tank Terminals 
-                and Magellan Midstream Partners to meet the growing demand for deepwater crude oil and 
-                condensate storage on the Gulf Coast.
+                Seabrook Logistics, LLC was established as a 50/50 joint venture between LBC Tank Terminals
+                and Magellan Midstream Partners to meet the growing demand for deepwater crude oil,
+                condensate, and refined fuel storage on the Gulf Coast.
               </p>
               <p className="text-navy/80 font-body text-base leading-relaxed mb-4">
-                Located in the Bayport Industrial Complex on Galveston Bay, our terminal offers direct 
-                access to the Houston Ship Channel — one of the busiest waterways in the world. With 
-                3.1 million barrels of storage capacity, two deepwater docks capable of handling Aframax 
-                and Suezmax vessels, and a 24-inch bidirectional pipeline connected to Magellan's Houston 
-                system, we provide unmatched connectivity and flexibility.
+                Located in the Bayport Industrial Complex on Galveston Bay, our terminal offers direct
+                access to the Houston Ship Channel — one of the busiest waterways in the world. With
+                3.1 million barrels of storage capacity, two deepwater docks capable of handling Aframax
+                and Suezmax vessels, and a 24-inch bidirectional pipeline connected to Magellan's Houston
+                system, we provide unmatched connectivity and flexibility for both raw feedstock and
+                finished, ready-to-use fuel products like diesel, gasoline, and jet fuel.
               </p>
               <p className="text-navy/80 font-body text-base leading-relaxed mb-6">
-                Our facility is engineered for the energy transition, incorporating nitrogen blanketing, 
-                vapor treatment, and advanced blending and filtering capabilities to meet evolving market 
-                and regulatory requirements.
+                Our facility is engineered for the energy transition, incorporating nitrogen blanketing,
+                vapor treatment, and advanced blending and filtering capabilities to meet evolving market
+                and regulatory requirements — supporting Seabrook Logistics' role as a full-service
+                midstream storage and logistics partner, from crude oil and condensate through to refined
+                petroleum products.
               </p>
               <Link
                 to="/services"
