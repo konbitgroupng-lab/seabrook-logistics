@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
@@ -10,6 +10,10 @@ import storageTanks from '../assets/seabrook-storage-tanks.jpg';
 import pipelineImg from '../assets/seabrook-pipeline.jpg';
 import labTechImg from '../assets/seabrook-lab-tech.jpg';
 
+// Hero video sources — slot 1 is bundled (Vite import), slot 2 served from public/
+const HERO_VIDEOS = [hero1, '/HeroE.mp4'];
+const SLIDE_MS = 9000; // ms each video is visible before crossfading to the next
+
 const stats = [
   { value: 3.1, suffix: 'M+', label: 'STORAGE CAPACITY' },
   { value: 2, suffix: '', label: 'DEEPWATER DOCKS' },
@@ -17,6 +21,17 @@ const stats = [
 ];
 
 const Home: React.FC = () => {
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  // Cycle to the next video every SLIDE_MS milliseconds
+  useEffect(() => {
+    const t = setInterval(
+      () => setActiveIdx((prev) => (prev + 1) % HERO_VIDEOS.length),
+      SLIDE_MS
+    );
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <div>
       {/* Hero — negative margin pulls it up to sit flush behind the fixed navbar */}
@@ -24,22 +39,35 @@ const Home: React.FC = () => {
         className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden -mt-[96px]"
         style={{ background: '#0B1F3A' }}
       >
-        {/* Background video — loops automatically, no poster so no photo flash */}
-        <video
-          src={hero1}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        {/* Overlay — 7/10 brightness flat dark */}
+        {/* Two always-mounted, always-looping videos that crossfade via opacity */}
+        {HERO_VIDEOS.map((src, idx) => (
+          <video
+            key={idx}
+            src={src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              opacity: idx === activeIdx ? 1 : 0,
+              transition: 'opacity 0.9s ease-in-out',
+              zIndex: idx === activeIdx ? 2 : 1,
+            }}
+          />
+        ))}
+
+        {/* Dark overlay — sits above videos, below content */}
         <div
           className="absolute inset-0"
-          style={{ background: 'rgba(11,31,58,0.55)' }}
+          style={{ background: 'rgba(11,31,58,0.55)', zIndex: 3 }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Content */}
+        <div
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          style={{ zIndex: 4 }}
+        >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,6 +104,39 @@ const Home: React.FC = () => {
               Contact Us
             </Link>
           </motion.div>
+        </div>
+
+        {/* Slide indicator dots — clickable, gold pill for active, muted dot for inactive */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 28,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 4,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+          }}
+        >
+          {HERO_VIDEOS.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIdx(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              style={{
+                height: 6,
+                width: idx === activeIdx ? 28 : 8,
+                borderRadius: 3,
+                background:
+                  idx === activeIdx ? '#D4A017' : 'rgba(255,255,255,0.45)',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
+                transition: 'width 0.35s ease, background 0.35s ease',
+              }}
+            />
+          ))}
         </div>
       </section>
 
