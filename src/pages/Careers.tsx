@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, MapPin, Clock, Users, Award, HeartPulse } from 'lucide-react';
 import PipelineDivider from '../components/PipelineDivider';
-import careersHero from '../assets/hero-1.mp4';
+const careersHero = '/HeroE.mp4';
 
 const openings = [
   {
