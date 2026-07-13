@@ -20,14 +20,6 @@ const stats = [
   { value: 45, suffix: 'ft', label: 'MAX DRAFT DEPTH' },
 ];
 
-const expansionStats = [
-  { value: '7.1M+', label: 'BARRELS STORAGE CAPACITY' },
-  { value: '10', label: 'DEEPWATER DOCKS' },
-  { value: '55 ft', label: 'DRAFT DEPTH' },
-  { value: '48"', label: 'BIDIRECTIONAL PIPELINE' },
-  { value: '150K', label: 'BARRELS/DAY LOAD RATE' },
-];
-
 const Home: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState(0);
 
@@ -186,99 +178,6 @@ const Home: React.FC = () => {
                   </>
                 )}
               </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Planned Capacity Expansion callout */}
-      <section
-        style={{
-          background: 'linear-gradient(135deg, #091829 0%, #0D2448 100%)',
-          borderTop: '2px dashed rgba(212,160,23,0.35)',
-          borderBottom: '2px dashed rgba(212,160,23,0.35)',
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          {/* Header row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-            <div className="flex items-center gap-3 flex-wrap">
-              <span
-                style={{
-                  background: 'rgba(212,160,23,0.15)',
-                  border: '1px solid #D4A017',
-                  color: '#D4A017',
-                  fontSize: '10px',
-                  fontWeight: 700,
-                  padding: '3px 10px',
-                  borderRadius: '3px',
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  whiteSpace: 'nowrap',
-                }}
-                className="font-mono"
-              >
-                Under Construction
-              </span>
-              <h3 className="font-heading text-white text-xl md:text-2xl tracking-wider">
-                PLANNED CAPACITY EXPANSION
-              </h3>
-            </div>
-            <p className="text-steel font-body text-sm sm:text-right max-w-xs leading-relaxed">
-              Expanding to meet growing Gulf Coast demand — completion targeted for{' '}
-              <span className="text-gold font-semibold">15 December 2026</span>.
-            </p>
-          </div>
-
-          {/* Expansion stat cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {expansionStats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.09 }}
-                style={{
-                  position: 'relative',
-                  border: '1px dashed rgba(212,160,23,0.4)',
-                  borderRadius: '6px',
-                  padding: '24px 14px 18px',
-                  textAlign: 'center',
-                }}
-              >
-                {/* PLANNED badge pinned to top of each card */}
-                <span
-                  style={{
-                    position: 'absolute',
-                    top: -10,
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: '#D4A017',
-                    color: '#0B1F3A',
-                    fontSize: '9px',
-                    fontWeight: 800,
-                    padding: '2px 9px',
-                    borderRadius: '3px',
-                    letterSpacing: '0.09em',
-                    textTransform: 'uppercase',
-                    whiteSpace: 'nowrap',
-                  }}
-                  className="font-mono"
-                >
-                  Planned
-                </span>
-
-                <div className="text-gold font-mono text-3xl font-semibold mb-1 leading-none">
-                  {stat.value}
-                </div>
-                <div
-                  className="text-steel font-body uppercase tracking-widest"
-                  style={{ fontSize: '10px', lineHeight: 1.5 }}
-                >
-                  {stat.label}
-                </div>
-              </motion.div>
             ))}
           </div>
         </div>
