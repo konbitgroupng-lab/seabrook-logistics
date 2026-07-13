@@ -82,7 +82,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="text-steel text-base sm:text-lg md:text-xl font-body max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Crude oil and condensate storage on the Houston Ship Channel — engineered for scale, built for the energy transition.
+            Crude oil, condensate, and refined fuel storage on the Houston Ship Channel — a full-service petroleum storage and logistics terminal, engineered for scale, built for the energy transition.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

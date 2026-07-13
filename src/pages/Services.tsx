@@ -25,7 +25,7 @@ const services = [
     icon: Droplets,
     image: storageTanks,
     description:
-      'Our state-of-the-art storage facility is designed to handle both crude oil and condensate with the highest standards of safety and efficiency. Advanced nitrogen blanketing systems protect product quality, while vapor treatment technologies minimize emissions and environmental impact.',
+      'Our state-of-the-art storage facility is designed to handle crude oil, condensate, and refined petroleum products — including diesel, gasoline, and jet fuel — with the highest standards of safety and efficiency. As a full-service midstream storage and logistics terminal, we receive, store, and move both raw feedstock and finished, ready-to-use fuel products toward refineries, distributors, and export markets. Advanced nitrogen blanketing systems protect product quality, while vapor treatment technologies minimize emissions and environmental impact.',
     features: [
       '3.1 million+ barrels total storage capacity',
       'Nitrogen blanketing for product preservation',
@@ -33,6 +33,9 @@ const services = [
       'Blending and filtering capabilities',
       'Multiple tank configurations for product segregation',
       'Automated tank gauging and inventory management',
+      'Refined fuel storage: diesel, gasoline, and jet fuel',
+      'Dedicated finished-product tanks separate from crude/condensate storage',
+      'Full midstream capability: from raw feedstock to ready-to-use fuel product handling',
     ],
     specs: [
       { label: 'Capacity', value: '3.1M+ bbl' },
