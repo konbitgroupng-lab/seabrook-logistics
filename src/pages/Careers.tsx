@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, MapPin, Clock, Users, Award, HeartPulse } from 'lucide-react';
 import PipelineDivider from '../components/PipelineDivider';
+import careersHero from '../assets/hero-1.mp4';
 
 const openings = [
   {
@@ -70,8 +71,41 @@ const Careers: React.FC = () => {
   return (
     <div>
       {/* Page hero */}
-      <section className="relative bg-navy py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative overflow-hidden" style={{ minHeight: '65vh', display: 'flex', alignItems: 'center' }}>
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+          }}
+        >
+          <source src={careersHero} type="video/mp4" />
+        </video>
+
+        {/* Dark navy overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(11,31,58,0.72)',
+            zIndex: 1,
+          }}
+        />
+
+        {/* Content */}
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center" style={{ zIndex: 2 }}>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
