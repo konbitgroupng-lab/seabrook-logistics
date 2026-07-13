@@ -2,7 +2,5 @@ node_modules
 dist
 src/assets/services-bg.mp4
 src/assets/bless.mp4
-src/assets/about-hero.mp4
 public/HeroD.mp4
-public/HeroE.mp4
 public/OurServices.mp4

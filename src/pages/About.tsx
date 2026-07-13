@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Eye, Users, Award, FileCheck, ShieldCheck, ExternalLink, Download } from 'lucide-react';
 import PipelineDivider from '../components/PipelineDivider';
 import seabrookTanks from '../assets/seabrook-tanks.png';
-const aboutHero = '/about-hero.mp4';
+import aboutHero from '../assets/about-hero.mp4';
 
 const values = [
   {
