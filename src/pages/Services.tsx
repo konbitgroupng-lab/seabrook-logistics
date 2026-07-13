@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Droplets, Anchor, ArrowLeftRight, FlaskConical, CheckCircle, ArrowRight } from 'lucide-react';
 import PipelineDivider from '../components/PipelineDivider';
-const servicesBg = '/services-bg.mp4';
+import servicesBg from '../assets/services-bg.mp4';
 import seabrookTanker from '../assets/seabrook-tanker.jpg';
 import storageTanks from '../assets/seabrook-storage-tanks.jpg';
 import pipelineImg from '../assets/seabrook-pipeline.jpg';

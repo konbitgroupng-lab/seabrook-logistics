@@ -23,9 +23,7 @@ dist-ssr
 .env
 
 # Large video files (>100 MB) – host on CDN for production
-src/assets/services-bg.mp4
-src/assets/bless.mp4
 public/HeroD.mp4
-public/OurServices.mp4
+src/assets/bless.mp4
 
 .vercel
