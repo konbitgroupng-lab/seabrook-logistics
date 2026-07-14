@@ -29,7 +29,7 @@ const capabilities = [
 const services = [
   {
     id: 'storage',
-    title: 'Crude Oil & Condensate Storage',
+    title: 'Crude Oil, Condensate & Refined Fuel Storage',
     icon: Droplets,
     image: storageTanks,
     description:
@@ -47,7 +47,7 @@ const services = [
     ],
     specs: [
       { label: 'Capacity', value: '3.1M+ bbl' },
-      { label: 'Products', value: 'Crude Oil, Condensate' },
+      { label: 'Products', value: 'Crude, Condensate & Refined' },
       { label: 'Blending', value: 'Yes' },
     ],
   },
@@ -78,11 +78,11 @@ const services = [
     icon: ArrowLeftRight,
     image: pipelineImg,
     description:
-      "Our 24-inch bidirectional pipeline provides direct, high-capacity connectivity to Magellan Midstream Partners' Houston pipeline system. This strategic link enables efficient movement of crude oil and condensate between our terminal and the broader Gulf Coast refining and distribution network.",
+      "Our 24-inch bidirectional pipeline provides direct, high-capacity connectivity to Magellan Midstream Partners' Houston pipeline system. This strategic link enables efficient movement of crude oil, condensate, and refined petroleum products between our terminal and the broader Gulf Coast refining and distribution network.",
     features: [
       '24-inch bidirectional pipeline',
       'Direct connection to Magellan Houston system',
-      'High-capacity throughput for crude and condensate',
+      'High-capacity throughput for crude, condensate, and refined products',
       'Redundant pump stations for reliability',
       'Real-time flow monitoring and control',
       'Interchange capability with multiple pipeline networks',

@@ -199,9 +199,9 @@ const Home: React.FC = () => {
               A STRATEGIC HUB FOR ENERGY LOGISTICS
             </h2>
             <p className="text-navy/80 font-body text-base md:text-lg leading-relaxed mb-8">
-              Seabrook Logistics, LLC is a 50/50 joint venture between LBC Tank Terminals and Magellan Midstream Partners, 
-              operating a world-class crude oil and condensate storage terminal on Galveston Bay. With deepwater access, 
-              direct pipeline connectivity, and a commitment to safety and sustainability, we are the Gulf Coast's trusted 
+              Seabrook Logistics, LLC is a 50/50 joint venture between LBC Tank Terminals and Magellan Midstream Partners,
+              operating a world-class crude oil, condensate, and refined fuel storage terminal on Galveston Bay. With deepwater access,
+              direct pipeline connectivity, and a commitment to safety and sustainability, we are the Gulf Coast's trusted
               partner for energy storage and distribution.
             </p>
             <Link
@@ -248,7 +248,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Crude Oil & Condensate Storage',
+                title: 'Crude Oil, Condensate & Refined Fuel Storage',
                 desc: '3.1M+ barrels with nitrogen blanketing, vapor treatment, blending, and filtering.',
                 image: storageTanks,
               },

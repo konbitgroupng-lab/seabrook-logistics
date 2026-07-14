@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                 }}
                 className="font-body"
               >
-                Your deepwater partner for crude oil storage and distribution on the Gulf Coast.
+                Your deepwater partner for crude oil, condensate, and refined fuel storage and distribution on the Gulf Coast.
               </p>
             </div>
           </div>

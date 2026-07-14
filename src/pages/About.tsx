@@ -10,7 +10,7 @@ const values = [
   {
     icon: Target,
     title: 'Mission',
-    text: 'To provide safe, reliable, and efficient crude oil and condensate storage and distribution services that power the energy transition while protecting people and the environment.',
+    text: 'To provide safe, reliable, and efficient crude oil, condensate, and refined fuel storage and distribution services that power the energy transition while protecting people and the environment.',
   },
   {
     icon: Eye,
